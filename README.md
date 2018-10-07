@@ -1,0 +1,1 @@
+# minda.github.io
