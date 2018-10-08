@@ -114,6 +114,9 @@ a{
 }
 .current{
 	background: #f6f6f6;
+	width: 96px;
+    /* height: 32px; */
+    text-align: center;
 }
 
 footer{
@@ -135,4 +138,9 @@ p{
 }
 .background:hover{
 	background-color: #f6f6f6;
+}
+.background{
+	width: 96px;
+    /* height: 32px; */
+    text-align: center;
 }
