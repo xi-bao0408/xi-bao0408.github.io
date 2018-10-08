@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charsef = "utf-8">
+		<title>喜宝-一个想要做一个关于民大的网页的人
+		</title>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="一个初学网页的小白想做一个网页">
+		<link rel="icon" type="image/ico" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/home_page.css">
+		<link rel="stylesheet" type="text/css" href="css/learn.css">
+		<link rel="stylesheet" type="text/css" href="css/HTML初级-基础标签.css">
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="site-name col-mb-12 col-9">
+						<a id="logo" href=" index.html" title="首页">民大喜宝</a>
+						<p class="description">作为一名刚学网页的小白想做一个网页，虽然很难，但是我想试试 ^.^</p>
+					</div>
+					<div class="col-mb-12">
+						<ul id="ul-menu" class="clearfix" >
+							<a class="background" href="index.html"title="首页">
+								首页
+							</a>
+							<a class="background" href="picture.html" title="民大风光">
+								民大风光
+							</a>
+							<a class="background" href="learn.html" title="网页学习">
+								网页学习
+							</a>
+							<a class="background" href="learn1.html" title="51单片机学习">
+								51单片机学习
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 上面为标题头 -->
+		<div id="body">
+			<div class="container">
+				<div class="row">
+					<div class="col-12"></div>
+					<div class="col-mb-12 col-8" id="main" roal="main">
+						<article class="post">
+							<h1 class="post-title text-center" itemprop="name headline">
+								<a id="size" href="HTML初级-基础标签.html">
+									HTML初级-基础标签
+								</a>
+							</h1>
+							<ul class="post-meta text-center">
+								<li itemprop="author">
+									作者：
+									<a itemprop="name" href="index.html" rel="author">喜宝</a>
+								</li>
+								<li>
+									时间：
+									<time datetime="2018-10-07T16:19:35+00:00" itemprop="datePublished">
+										2018-10-7
+									</time>
+								</li>
+								<li>
+									分类：
+									<a href="#">html、笔记</a>
+								</li>
+							</ul>
+							<div class="post-content p-content" itemprop="articleBody">
+								<p>所有HTML文件的开头</p>
+								<pre><code>&lt;html lang="en"&gt;</code></pre>
+								<p>头标签 其中的lang="en"告诉搜索引擎爬虫，我们的网站是什么语言
+								</p>
+								<p class="color1">注释：lang 属性在以下标签中无效：&lt;base&gt;, &lt;br&gt;, &lt;frame&gt;, &lt;frameset&gt;, &lt;hr&gt;, &lt;iframe&gt;, &lt;param&gt; 以及 &lt;script&gt;</p>
+								<pre><code>  &lt;head&gt;											1<br>	&lt;meta charset="utf-8"&gt;									2<br>	&lt;title&gt;喜宝-一个想要做一个关于民大的网页的人&lt;/title&gt;					3<br>	&lt;meta content="  " name="  "&gt;								4<br>	&lt;link rel="icon" type="image/ico"href="favicon.ico"&gt;					5<br>  &lt;/head&gt;</code></pre>
+								<p>1 head为结构化标签，里面的内容用户看不见
+								</p>
+								<p>2 charset为编码字符集</p>
+								<p class="color1">gb2312(国家标准第2312条)（只能识别简体）
+								gbk(国家标准扩展版本)（包含繁体）
+								<br>
+								Unicode（万国码）
+								Utf-8(Unicode的升级版 8比特)
+								</p>	
+								<p>3 title 属性规定关于元素的额外信息。<br>这些信息通常会在鼠标移到元素上时显示一段工具提示文本。</p>
+								<p>4 meta标签通常用来为搜索引擎robots定义页面主题，或者是定义用户浏览器上的cookie；它可以用于鉴别作者，设定页面格式，标注内容提要和关键字；还可以设置页面使其可以根据你定义的时间间隔刷新自己,以及设置RASC内容等级，等等。</p>	
+								<p>name是描述网页的，对应于Content（网页内容），以便于搜索引擎机器人查找、分类（目前几乎所有的搜索引擎都使用网上机器人自动查找meta值来给网页分类）。</p>
+								<p>5 在导航栏前面加图标</p>
+								<pre><code>&lt;body&gt;//结构化标签（可以看到的）<br>	&lt;p&gt;     &lt;/p&gt;<br>	&lt;h1&gt;&lt;/h1&gt;<br>	&lt;h2&gt;&lt;/h2&gt;<br>	········<br>	&lt;h6&gt;&lt;/h6&gt; <br>	&lt;strong&gt; &lt;/strong&gt;<br>	&lt;em&gt; &lt;/em&gt;<br>	&lt;strong&gt;<br>	&lt;em&gt; 	<br>	&lt;/em&gt;<br>	&lt;/strong&gt;<br>	&lt;del  style=”color:     ”&gt;23 &lt;/del&gt;<br>	&lt;address&gt; &lt;/address&gt;<br>	&lt;div&gt; &lt;/div&gt;<br>	&lt;span&gt; &lt;/span&gt;<br>&lt;/body&gt;</code></pre>
+								<p>body为结构化标签（用户可以看到）</p>
+								<p>&lt;p&gt;标签为段落标签，可在中间插入内容，自占一行</p>
+								<p>&lt;h1&gt;到&lt;h6&gt;标签为标题标签，由h1最大到h6最小</p>
+								<p>strong标签为加粗标签，将内部文本加粗显示</p>
+								<p>em标签为斜体标签，将内部文本斜体显示</p>
+								<p>标签可以互相嵌套使用</p>
+								<p>del为加中划线标签，一般价格的中划线用它来表示比如<del>23</del><br>style="color:#000000"为css中用来改变颜色的语句</p>
+								<p>address为地址标签（斜体、独占一行）</p>
+								<p class="color1">div标签（容器）（划分明确）（让页面更加结构化）竖排（在网页中使用较多）</p>
+								<p class="color1">span标签（容器）（划分明确）（让页面更加结构化）横排</p>
+								<pre><code>&lt;/html&gt;</code></pre>
+								<p>尾标签（HTML文件的结束）</p>
+							</div>
+						</article>
+					</div>
+					<ul class="post-near">
+						<li>
+							上一篇：没有了
+						</li>
+						<li>
+							下一篇：没有了
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p>&copy; 2018 喜宝 | 想投稿的朋友请联系QQ1808818536</p>
+	</footer>
+</html>
