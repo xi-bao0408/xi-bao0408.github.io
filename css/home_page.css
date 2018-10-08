@@ -54,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 .clearfix, .row{
 	zoom:1;
 }
+
 .row [class*="col-"]{
 	float:left;
 	min-height: 1px;
@@ -136,6 +137,7 @@ footer{
 p{
 	font-family: arial;
 }
+
 .background:hover{
 	background-color: #f6f6f6;
 }
