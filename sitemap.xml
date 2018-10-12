@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<!-- Free Sitemap Generator http://www.sitemapx.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://www.bao0408.club/</loc>
+<priority>1.0</priority>
+<lastmod>2018-10-13T00:20:50+00:00</lastmod>
+<changefreq>Always</changefreq>
+</url>
+<url>
+<loc>https://www.bao0408.club</loc>
+<priority>0.8</priority>
+<lastmod>2018-10-12T15:56:54+00:00</lastmod>
+<changefreq>Always</changefreq>
+</url>
+</urlset>
