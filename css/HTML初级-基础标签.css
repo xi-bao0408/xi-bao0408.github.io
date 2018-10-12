@@ -60,3 +60,13 @@ p{
 .post-near li {
     margin: 10px 0;
 }
+pre{
+	margin-top:10px;
+	margin-bottom:0px;
+	padding:10px;
+	border:1px dotted rgb(119,136,85);
+	font-family:Consolas, 'Courier New', Courier, monospace;
+	/*width:685px;*/
+	font-size:12px;
+	background-color:rgb(245,245,245);
+}
