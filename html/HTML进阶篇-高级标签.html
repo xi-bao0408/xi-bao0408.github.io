@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charsef = "utf-8">
+		<title>喜宝-一个想要做一个关于民大的网页的人
+		</title>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="一个初学网页的小白想做一个网页">
+		<link rel="icon" type="image/ico" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/home_page.css">
+		<link rel="stylesheet" type="text/css" href="../css/learn.css">
+		<link rel="stylesheet" type="text/css" href="../css/HTML初级-基础标签.css">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275034787'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275034787%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="site-name col-mb-12 col-9">
+						<a id="logo" href=" ../index.html" title="首页">民大喜宝</a>
+						<p class="description">作为一名刚学网页的小白想做一个网页，虽然很难，但是我想试试 ^.^</p>
+					</div>
+					<div class="col-mb-12">
+						<ul id="ul-menu" class="clearfix" >
+							<a class="background" href="../index.html"title="首页">
+								首页
+							</a>
+							<a class="background" href="../picture.html" title="民大风光">
+								民大风光
+							</a>
+							<a class="background" href="../learn.html" title="网页学习">
+								网页学习
+							</a>
+							<a class="background" href="../learn1.html" title="51单片机学习">
+								51单片机学习
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 上面为标题头 -->
+		<div id="body">
+			<div class="container">
+				<div class="row">
+					<div class="col-12"></div>
+					<div class="col-mb-12 col-8" id="main" roal="main">
+						<article class="post">
+							<h1 class="post-title text-center" itemprop="name headline">
+								<a id="size" href="HTML进阶篇-高级标签.html">
+									HTML进阶篇-高级标签上
+								</a>
+							</h1>
+							<ul class="post-meta text-center">
+								<li itemprop="author">
+									作者：
+									<a itemprop="name" href="../index.html" rel="author">喜宝</a>
+								</li>
+								<li>
+									时间：
+									<time datetime="2018-10-12T16:40:35+00:00" itemprop="datePublished">
+										2018-10-12
+									</time>
+								</li>
+								<li>
+									分类：
+									<a href="#">html、笔记</a>
+								</li>
+							</ul>
+							<div class="post-content p-content" itemprop="articleBody">
+								<p></p>
+								<pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+								<p>这个标签现在几乎每个网页都会有，此为HTML5仅有的一个声明，它必须放在文件的开头在&lt;html&gt;之前。</p>
+								<h3 style="font-weight: bold;">HTML 4.01有三个声明</h3>
+								<p>HTML 4.01 Strict<br>该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。</p>
+								<pre><code>&lt;!DOCTYPE&nbsp;HTML&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;HTML&nbsp;4.01//EN"&nbsp;<br>"http://www.w3.org/TR/html4/strict.dtd"&gt;</code></pre>
+								<p>HTML 4.01 Transitional<br>该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。</p>
+								<pre><code>&lt;!DOCTYPE&nbsp;HTML&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;HTML&nbsp;4.01&nbsp;Transitional//EN"&nbsp;<br>"http://www.w3.org/TR/html4/loose.dtd"&gt;</code></pre>
+								<p>HTML 4.01 Frameset<br>该 DTD 等同于 HTML 4.01 Transitional，但允许框架集内容。</p>
+								<pre><code>&lt;!DOCTYPE&nbsp;HTML&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;HTML&nbsp;4.01&nbsp;Frameset//EN"&nbsp;<br>"http://www.w3.org/TR/html4/frameset.dtd"&gt;</code></pre>
+								<pre><code>&lt;style type="text/css"&gt;</code></pre>
+								<p>此标签是用来在HTML文件中使用css的一种格式</p>
+								<p>在它下面可以使用以下代码，来对&lt;body&gt;中的标签进行装饰</p>
+								<pre><code>*{<br>&#9;<!-- tab -->margin:0;<br>&#9;padding:0;<br>&nbsp;&nbsp;}</code></pre>
+								<p>利用*{}来选择所有标签并利用margin:0;和padding:0;来初识化文章中的所有标签（以后会将CSS的内容）</p>
+								<pre><code>&  ;</code></pre>
+								<p>&为HTML中的编码特殊符（网页中的代码有很多需要特殊符来显示出来，而不是去执行）</p>
+								<pre><code>A&lt;br&gt;B<br>它就等价于<br>&#9;A<br>&#9;B</code></pre>	
+								<p>&lt;br&gt;表示换行（他是一个单标签）</p>
+								<pre><code>&lt;hr&gt;</code></pre>
+								<p>此标签使用来在页面中显示一条水平线，就比如下面这条线<hr></p>
+								<pre><code>&lt;ol  type=”1”   reversed=”reversed”   start=”2” &gt; <br>&#9;&lt;li&gt;&lt;/li&gt;<br>&#9;&lt;li&gt;&lt;/li&gt;<br>&#9;&lt;li&gt;&lt;/li&gt;<br>&lt;/ol&gt;</code></pre>
+								<p>&lt;ol&gt;标签为有序列表<br>它里面的&lt;li&gt;为有序列表的列表架（用来有序存放东西）<br>&lt;ol&gt;中的type="1" 表示按数字顺序排序<br>reversed表示按倒序来排的<br>start=2"表示从第几个开始排（填数字就好）<br>下面为几组演示</p>
+								<pre><code>&lt;ol&gt;&#9;&#9; &lt;ol start=&quot;50&quot;&gt;&#9;&lt;ol reversed&gt;&#9;&#9;&#9;&lt;ol type=&quot;I&quot;&gt;<br>&nbsp;&nbsp;&lt;li&gt;咖啡&lt;/li&gt;&#9;&nbsp;&nbsp;&nbsp;&lt;li&gt;咖啡&lt;/li&gt;&#9;&nbsp;&nbsp;&lt;li&gt;咖啡&lt;/li&gt;&#9;&#9;&#9;&nbsp;&nbsp;&lt;li&gt;咖啡&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;牛奶&lt;/li&gt;&#9;&nbsp;&nbsp;&nbsp;&lt;li&gt;牛奶&lt;/li&gt;&#9;&nbsp;&nbsp;&lt;li&gt;牛奶&lt;/li&gt;&#9;&#9;&#9;&nbsp;&nbsp;&lt;li&gt;牛奶&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;茶&lt;/li&gt;&#9;&nbsp;&nbsp;&nbsp;&lt;li&gt;茶&lt;/li&gt;&#9;&#9;&nbsp;&nbsp;&lt;li&gt;茶&lt;/li&gt;&#9;&#9;&#9;&nbsp;&nbsp;&lt;li&gt;茶&lt;/li&gt;<br>&lt;/ol&gt;&#9;&#9;&nbsp;&lt;/ol&gt;&#9;&#9;&#9;&lt;/ol&gt;&#9;&#9;&#9;&#9;&lt;/ol&gt;</code></pre>
+								<pre><code>1.咖啡&#9;&#9;50.咖啡&#9;&#9;3.咖啡&#9;&#9;I.咖啡<br>2.牛奶&#9;&#9;51.牛奶&#9;&#9;2.牛奶&#9;&#9;II.牛奶<br>3.茶&#9;&#9;52.茶&#9;&#9;1.茶&#9;&#9;III.茶</code></pre>
+							</div>
+						</article>
+					</div>
+
+					<ul class="post-near">
+						<li>
+							上一篇：<a href="../HTML初级-基础标签.html">HTML初级-基础标签</a>
+						</li>
+						<li>
+							下一篇：没有了
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p>&copy; 2018 喜宝 | 想投稿的朋友请联系QQ1808818536</p>
+	</footer>
+</html>
