@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charsef = "utf-8">
+		<title>喜宝-一个想要做一个关于民大的网页的人
+		</title>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="一个初学网页的小白想做一个网页">
+		<link rel="icon" type="image/ico" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/home_page.css">
+		<link rel="stylesheet" type="text/css" href="../css/learn.css">
+		<link rel="stylesheet" type="text/css" href="../css/HTML初级-基础标签.css">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275034787'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275034787%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+		
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="site-name col-mb-12 col-9">
+						<a id="logo" href=" ../index.html" title="首页">民大喜宝</a>
+						<p class="description">作为一名刚学网页的小白想做一个网页，虽然很难，但是我想试试 ^.^</p>
+					</div>
+					<div class="col-mb-12">
+						<ul id="ul-menu" class="clearfix" >
+							<a class="background" href="../index.html"title="首页">
+								首页
+							</a>
+							<a class="background" href="../picture.html" title="民大风光">
+								民大风光
+							</a>
+							<a class="background" href="../learn.html" title="网页学习">
+								网页学习
+							</a>
+							<a class="background" href="../learn1.html" title="51单片机学习">
+								51单片机学习
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 上面为标题头 -->
+		<div id="body">
+			<div class="container">
+				<div class="row">
+					<div class="col-12"></div>
+					<div class="col-mb-12 col-8" id="main" roal="main">
+						<article class="post">
+							<h1 class="post-title text-center" itemprop="name headline">
+								<a id="size" href="初识51单片机.html">
+									初识51单片机
+								</a>
+							</h1>
+							<ul class="post-meta text-center">
+								<li itemprop="author">
+									作者：
+									<a itemprop="name" href="../index.html" rel="author">喜宝</a>
+								</li>
+								<li>
+									时间：
+									<time datetime="2018-10-13T16:40:35+08:00" itemprop="datePublished">
+										2018-10-13
+									</time>
+								</li>
+								<li>
+									分类：
+									<a href="#">51单片机、例程</a>
+								</li>
+							</ul>
+							<div class="post-content p-content" itemprop="articleBody">
+								<p style="text-indent: 4em;">在初学51的时候，每个人的项目几乎都是点亮一个小灯，就和学习一门编程语言时，每个人写的第一个程序都是“Hello，world！”。点亮一个小灯也是51中最简单的一个例程了。</p>
+								<p>首先我们使用的IDE为keil4和普通的C语言环境。</p>
+								<p>【点亮LED小灯】</p>
+								<div class="cnblogs_code">
+								<pre>#include &lt;reg52.h&gt;  <span style="color: #000000;"><br>sbit led</span>=P0^<span style="color: #800080;">0</span><span style="color: #000000;">;<br></span><span style="color: #0000ff;">void</span><span style="color: #000000;"> main()<br>{</span><br>&#9;<span style="color: #0000ff;">while</span>(<span style="color: #800080;">1</span><span style="color: #000000;">)<br>&#9;{<br>&#9;&nbsp;&nbsp;led</span>=<span style="color: #800080;">0</span><span style="color: #000000;">;<br>&#9;}<br>}</span></pre>
+								<p>大家可以看到，电亮一个小灯仅需要简单的5行代码。</p>
+								<p>但我们可以通过这个小程序来学习51的C语言编程和平时正常的C语言的一些去别。</p>
+								<p>首先，可以看到51中的头文件为<span style="color: #ff3030;">"reg52.h"</span>,不同于C语言中的<span style="color: #ff3030;">"stdio.h"</span></p>
+								<p>在<span style="color: #ff3030;">"reg52.h"</span>头文件中添加了一些sbit之类的数据类型。有了这个头文件以后，P0、P1、P2、P3这几个表示单片机8个引脚的变量都不用自己再定义了。然后还有单片机内部的一些涉及到中断之类的功能的变量定义。</p>
+								<p>主程序需要知道的即是单片机初始状态默认都是高电平，1代表高电平，0是低电平。并且单片机一旦通电就会一直执行你的程序，不能关闭只能断电，所以为了科学使用单片机，最好自己预先设定一个死循环。</p>
+							</div>
+						</article>
+					</div>
+					<ul class="post-near">
+						<li>
+							上一篇：<a href="初识51单片机.html">初识51单片机</a>
+						</li>
+						<li>
+							下一篇：没有了
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p>&copy; 2018 喜宝 | 想投稿的朋友请联系QQ1808818536</p>
+	</footer>
+</html>
