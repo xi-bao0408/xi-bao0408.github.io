@@ -51,8 +51,8 @@
 					<div class="col-mb-12 col-8" id="main" roal="main">
 						<article class="post">
 							<h1 class="post-title text-center" itemprop="name headline">
-								<a id="size" href="51学习之流水灯.html">
-									51学习之流水灯
+								<a id="size" href="51学习之8位共阴数码管静态扫描.html">
+									51学习之8位共阴数码管静态扫描
 								</a>
 							</h1>
 							<ul class="post-meta text-center">
@@ -62,8 +62,8 @@
 								</li>
 								<li>
 									时间：
-									<time datetime="2018-10-15T16:40:35+08:00" itemprop="datePublished">
-										2018-10-15
+									<time datetime="2018-10-16T16:40:35+08:00" itemprop="datePublished">
+										2018-10-16
 									</time>
 								</li>
 								<li>
@@ -72,29 +72,32 @@
 								</li>
 							</ul>
 							<div class="post-content p-content" itemprop="articleBody">
-								<p style="text-indent: 4em;">这次我们讲解如何编写流水灯程序。</p>
-								<p>首先我们需要了解一下流水灯模块的电路图。</p>
+								<p style="text-indent: 4em;">这次讲解如何编写8位共阴极数码管的静态扫描。</p>
+								<p>首先还是看一下数码管和需要用到的锁存器及锁存器连接51芯片的电路图</p>
 								<div id="wrapper">
-									<a	href="51学习/流水灯模块.png" target="_blank">
-									<img  src ="51学习/流水灯模块.png" alt="">
+									<a	href="51学习/数码管.png" target="_blank">
+									<img  src ="51学习/数码管.png" alt=""><p>数码管从高位到低位的段码依次是a,b,c,d,e,f,g,h共八位。</p>
+									</a>
+									<a	href="51学习/数码管锁存器.png" target="_blank">
+									<img  src ="51学习/数码管锁存器.png" alt="">
+									</a>
+									<a	href="51学习/锁存器连51接线.png" target="_blank">
+									<img  src ="51学习/锁存器连51接线.png" alt="">
 									</a>
 								</div>
-								<p>通过电路图可以看到，流水灯是由8个LED灯组成</p>
-								<p>且每个小灯的正极都接在了vcc上（vcc为单片机上的5v供电口），负极一端都接在了<span style="color: #f30;">P1</span>的IO口上了</p>
-								<p>由此可以知道当IO口输出低电平时（输出为0）LED灯点亮<br>就比如&nbsp;P1^<span style="color:#800080">0</span>&nbsp;=&nbsp;0;</p>
-								<p>下面开始编写代码，代码尽量自己去敲而不是一味的去复制粘贴，这样可以给自己一个思考的时间，去理解每一句的意思</p>
-								<pre><code>#include&lt;reg52.h&gt;<br>#include&lt;intrins.h&gt;<span style="color: #0f0;">//循环左移函数的头文件</span><br>void delayms(unsigned int k);<span style="color: #0f0;">//对子函数的声明</span><br>void main()<br>{<br>&#9;P1 = 0xfe;<span style="color: #0f0;">//也可以是二进制的11111110</span><br>&#9;while(1)<span style="color: #0f0;">//把内部程序写成死循环，让它一直执行</span><br>&#9;{<br>&#9;  delayms(500);<span style="color: #0f0;">//延时500毫秒</span><br>&#9;  P1 = _crol_(P1,1);<span style="color: #0f0;">//循环左移一位</span><br>&#9;}<br>}<br>void delayms(unsigned int k)<span style="color: #0f0;">//延时函数</span><br>{<br>&#9;unsigned int i , j;<br>&#9;for(i = 0;i &lt; k;i++)<br>&#9;for(j = 0;j &lt; 125;j++)<br>}</code></pre>
-								<p style="color: #f30;">这里需要补充一个内容，用Keil4编写完，需要编译生成一个hex文件。在主界面编译图标呢一行找到一个名为Target Options的图标点进去后找到Output呢一页，然后找到Create HEX file这个选项并打勾。</p>
-								<p>在代码中有一个子函数void delayms();这个函数会经常用到，一般称之为<span style="color: #f30;">延时函数</span>就是让51芯片做无用的加法操作来拖延时间，起到一个延时的作用。</p>
+								<p>锁存器分为位选锁存器和段选锁存器，位选锁存器顾名思义就是选择第几个数码管亮的，而段选锁存器则是控制你所选的那一位的数码管的哪一段点亮。</p>
+								<p>从电路图中可以看到位选锁存器的开关接到了51的P2^7IO口上，位选锁存器的开关接在了P2^6IO口上。<br>两个锁存器的数据输入端都接在了P0的IO口上了。<br><span style="color: #f30;">共阴管是“1”表示亮，“0”表示灭。</span></p>
+								<p>知道了基本原理，开始编写程序</p>
+								<pre><code>#include%lt;reg52.h&gt;<br>sbit dula = P2^6;<span style="color: #8FBC8F;">//定义段选</span><br>sbit wela = P2^7;<span style="color: #8FBC8F;">//定义位选</span><br>unsigned char table[18] = {<br>&#9;&#9;&#9;&#9;0x3f, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F,<br>&#9;&#9;&#9;&#9;0x6F, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71, 0x80, 0x00<br>};<br><br>void delayms(unsigned int k)<span style="color: #8fbc8f;">//延时函数</span><br>{<br>&#9;unsigned int i , j;<br>&#9;for(i = 0;i &lt; k;i++)<br>&#9;for(j = 0;j &lt; 125;j++)<br>}<br>void main()<br>{<br>&#9;int i;<br>&#9;<span style="color: #8FBC8F;">//位选</span><br>&#9;wela = 1;<span style="color: #8FBC8F;">//位选端锁存器置高，打开位选锁存器</span><br>&#9;P0 = 0x00;<span style="color: #8FBC8F;">//送入数据，全部打开（低电平有效）</span><br>&#9;wela = 0;<span style="color: #8FBC8F;">// 位选端锁存器置低，保存数据</span><br>&#9;while(1)<br>&#9;{<br>&#9;&#9;for(i = 0;i &lt; 18;i++)<br>&#9;&#9;{<br>&#9;&#9;&#9;<span style="color: #8FBC8F;">//段选</span><br>&#9;&#9;&#9;dula = 1;<span style="color: #8FBC8F;">// 段选端锁存器置高，打开段选所存器</span><br>&#9;&#9;&#9;P0 = table[i];<span style="color: #8FBC8F;">//送入数据</span><br>&#9;&#9;&#9;dula = 0;<span style="color: #8FBC8F;">// 段选端锁存器置低，保存数据</span><br><br>&#9;&#9;&#9;delayms(500);<br>&#9;&#9;}<br>&#9;}<br>}</code></pre>
 							</div>
 						</article>
 					</div>
 					<ul class="post-near">
 						<li>
-							上一篇：<a href="51学习之点亮一个小灯.html">51学习之点亮一个小灯</a>
+							上一篇：<a href="51学习之流水灯.html">51学习之流水灯</a>
 						</li>
 						<li>
-							下一篇：<a href="51学习之8位共阴数码管静态扫描.html">51学习之8位共阴数码管静态扫描</a>
+							下一篇：没有了
 						</li>
 					</ul>
 				</div>
