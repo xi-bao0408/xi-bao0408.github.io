@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charsef = "utf-8">
+		<title>喜宝-一个想要做一个关于民大的网页的人
+		</title>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="一个初学网页的小白想做一个网页">
+		<link rel="icon" type="image/ico" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/home_page.css">
+		<link rel="stylesheet" type="text/css" href="../css/learn.css">
+		<link rel="stylesheet" type="text/css" href="../css/HTML初级-基础标签.css">
+		<link rel="stylesheet" type="text/css" href="../css/picture.css">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275009736'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275009736%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275034787'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275034787%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>	
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="site-name col-mb-12 col-9">
+						<a id="logo" href=" ../index.html" title="首页">民大喜宝</a>
+						<p class="description">作为一名刚学网页的小白想做一个网页，虽然很难，但是我想试试 ^.^</p>
+					</div>
+					<div class="col-mb-12">
+						<ul id="ul-menu" class="clearfix" >
+							<a class="background" href="../index.html"title="首页">
+								首页
+							</a>
+							<a class="background" href="../picture.html" title="民大风光">
+								民大风光
+							</a>
+							<a class="background" href="../learn.html" title="网页学习">
+								网页学习
+							</a>
+							<a class="background" href="../learn1.html" title="51单片机学习">
+								51单片机学习
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 上面为标题头 -->
+		<div id="body">
+			<div class="container">
+				<div class="row">
+					<div class="col-12"></div>
+					<div class="col-mb-12 col-8" id="main" roal="main">
+						<article class="post">
+							<h1 class="post-title text-center" itemprop="name headline">
+								<a id="size" href="51学习之中断.html">
+									51学习之中断(一)
+								</a>
+							</h1>
+							<ul class="post-meta text-center">
+								<li itemprop="author">
+									作者：
+									<a itemprop="name" href="../index.html" rel="author">喜宝</a>
+								</li>
+								<li>
+									时间：
+									<time datetime="2018-10-19T16:40:35+08:00" itemprop="datePublished">
+										2018-10-19
+									</time>
+								</li>
+								<li>
+									分类：
+									<a href="#">51单片机、例程</a>
+								</li>
+							</ul>
+							<div class="post-content p-content" itemprop="articleBody">
+								<p style="text-indent: 2em;">本篇进行中断系统的讲解。</p>
+								<p style="color: #f30;font-size: 20px;font-weight: bold;">中断的概念</p>
+								<p style="text-indent: 2em;">CPU在处理某一事件A时，发生了另一事件B请求CPU迅速去处理（<span style="color:#cd1076; ">中断发生</span>）</p>
+								<p style="text-indent: 2em;">CPU暂时中断当前的工作，转去处理事件（<span style="color: #cd1076;">中断响应和中断服务</span>）</p>
+								<p style="text-indent: 2em;">待CPU将事件B处理完毕后，再回到原来事件A被中断的地方继续处理事件A（<span style="color: #cd1076;">中断返回</span>），这一过程称为<span style="color: #cd1076;">中断</span></p>
+								<p>中断系统结构</p>
+								<div id="wrapper">
+									<a	href="51学习/中断1.png" target="_blank">
+									<img  src ="51学习/中断1.png" alt="">
+									</a>
+								</div>
+								<div id="wrapper">
+									<a	href="51学习/中断2.png" target="_blank">
+									<img  src ="51学习/中断2.png" alt="">
+									</a>
+								</div>
+								<p style="text-indent: 2em;">引起CPU中断的根源，称为<span style="color: #cd1076;">中断源</span>。中断源向CPU提出的中断请求。CPU暂时中断原来的事务A，转去处理事件B。对事件B处理完毕后，再回到原来被中断的地方（即<span style="color: #cd1076;">断点</span>），称为中断返回。实现上述中断功能的部件称为<span style="color: #cd1076;">中断系统</span>（中断机构）。</p>
+								<p style="text-indent: 2em;">随着计算机技术的应用，人们发现中断技术不仅解决了快速主机与慢速I/O设备的数据传送问题，而且还具有如下优点：</p>
+								<p style="text-indent: 4em;">*<span style="color: #cd1076;">分时操作</span>。CPU可以分时为多个I/O设备服务，提高了计算机的利用率；</p>
+								<p style="text-indent: 4em;">*<span style="color: #cd1076;">实时响应</span>。CPU能够及时处理应用系统的随机事件，系统的实时性大大增强；</p>
+								<p style="text-indent: 4em;">*<span style="color: #cd1076;">可靠性高</span>。CPU具有处理设备故障及掉电等突发性事件能力，从而使系统可靠性提高。</p>
+								<p style="text-indent: 2em;color: #f30;">80c51的中断系统有5个中断源，2个优先级，可以实现二级中断嵌套。</p>
+								<div id="wrapper">
+									<a	href="51学习/中断3.png" target="_blank">
+									<img  src ="51学习/中断3.png" alt="">
+									</a>
+								</div>
+								<p> 1、（P3.2）可由IT0(TCON.0)选择其为低电平有效还是下降沿有效。当CPU检测到P3.2引脚上出现有效的中断信号时，中断标志IE0(TCON.1)置1，向CPU申请中断。</p>
+								<p> 2、（P3.3）可由IT1(TCON.2)选择其为低电平有效还是下降沿有效。当CPU检测到P3.3引脚上出现有效的中断信号时，中断标志IE1(TCON.3)置1,向CPU申请中断。</p>
+								<p>3、<span style="color: #cd1076;">TF0</span>（TCON.5），片内定时/计数器T0溢出中断请求标志。当定时/计数器T0发生溢出时，置位TF0，并向CPU申请中断。</p>
+								<p>4、<span style="color: #cd1076;">TF1</span>（TCON.7），片内定时/计数器T1溢出中断请求标志。当定时/计数器T1发生溢出时，置位TF1，并向CPU申请中断。</p>
+								<p>5、<span style="color: #cd1076;">RI</span>（SCON.0）或<span style="color: #cd1076;">TI</span>（SCON.1），串行口中断请求标志。当串行口接收完一帧串行数据时置位RI或当串行口发送完一帧串行数据时置位TI，向CPU申请中断。 </p>
+
+							</div>
+						</article>
+					</div>
+					<ul class="post-near">
+						<li>
+							上一篇：<a href="51学习之8位共阴数码管动态扫描.html">51学习之8位共阴数码管动态扫描</a>
+						</li>
+						<li>
+							下一篇：没有了
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p>&copy; 2018 喜宝 | 想投稿的朋友请联系QQ1808818536</p>
+	</footer>
+</html>
