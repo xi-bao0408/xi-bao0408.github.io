@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charsef = "utf-8">
+		<title>喜宝-一个想要做一个关于民大的网页的人
+		</title>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="一个初学网页的小白想做一个网页">
+		<link rel="icon" type="image/ico" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/home_page.css">
+		<link rel="stylesheet" type="text/css" href="../css/learn.css">
+		<link rel="stylesheet" type="text/css" href="../css/HTML初级-基础标签.css">
+		<link rel="stylesheet" type="text/css" href="../css/picture.css">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275009736'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275009736%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275034787'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275034787%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>	
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="site-name col-mb-12 col-9">
+						<a id="logo" href=" ../index.html" title="首页">民大喜宝</a>
+						<p class="description">作为一名刚学网页的小白想做一个网页，虽然很难，但是我想试试 ^.^</p>
+					</div>
+					<div class="col-mb-12">
+						<ul id="ul-menu" class="clearfix" >
+							<a class="background" href="../index.html"title="首页">
+								首页
+							</a>
+							<a class="background" href="../picture.html" title="民大风光">
+								民大风光
+							</a>
+							<a class="background" href="../learn.html" title="网页学习">
+								网页学习
+							</a>
+							<a class="background" href="../learn1.html" title="51单片机学习">
+								51单片机学习
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 上面为标题头 -->
+		<div id="body">
+			<div class="container">
+				<div class="row">
+					<div class="col-12"></div>
+					<div class="col-mb-12 col-8" id="main" roal="main">
+						<article class="post">
+							<h1 class="post-title text-center" itemprop="name headline">
+								<a id="size" href="51学习之中断1.html">
+									51学习之中断(二)
+								</a>
+							</h1>
+							<ul class="post-meta text-center">
+								<li itemprop="author">
+									作者：
+									<a itemprop="name" href="../index.html" rel="author">喜宝</a>
+								</li>
+								<li>
+									时间：
+									<time datetime="2018-10-20T16:40:35+08:00" itemprop="datePublished">
+										2018-10-20
+									</time>
+								</li>
+								<li>
+									分类：
+									<a href="#">51单片机、例程</a>
+								</li>
+							</ul>
+							<div class="post-content p-content" itemprop="articleBody">
+								<p style="text-indent: 2em;">本篇进行中断系统的讲解。</p>
+								<p style="font-size: 20px;font-weight: bold;">中断请求标志</p>
+								<p>1.TCON的中断标志</p>
+								<div id="wrapper">
+									<a	href="51学习/中断9.png" target="_blank">
+									<img  src ="51学习/中断9.png" alt="">
+									</a>
+								</div>
+								<p style="text-indent: 2em;">IT0（TCON.0），外部中断0触发方式控制位。</p>
+								<p style="text-indent: 2em;color: #cd1076;">当IT0=0时，为电平触发方式。</p>
+								<p style="text-indent: 2em;color: #cd1076;">当IT0=1时，为边沿触发方式（下降沿有效）。</p>
+								<p style="text-indent: 2em;">IE0（TCON.1），外部中断0中断请求标志位。</p>
+								<p style="text-indent: 2em;">IT1（TCON.2），外部中断1触发方式控制位。</p>
+								<p style="text-indent: 2em;">IE1（TCON.3），外部中断1中断请求标志位。</p>
+								<p style="text-indent: 2em;">TF0（TCON.5），定时/计数器T0溢出中断请求标志位。</p>
+								<p style="text-indent: 2em;">TF1（TCON.7），定时/计数器T1溢出中断请求标志位。</p>
+								<p>2.SCON的中断标志</p>
+								<div id="wrapper">
+									<a	href="51学习/中断4.png" target="_blank">
+									<img  src ="51学习/中断4.png" alt="">
+									</a>
+								</div>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*RI</span>（SCON.0），串行口接收中断标志位。当允许串行口接收数据时，每接收完一个串行帧，由硬件置位RI。注意，RI必须由软件清除。</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*TI</span>（SCON.1），串行口发送中断标志位。当CPU将一个发送数据写入串行口发送缓冲器时，就启动了发送过程。每发送完一个串行帧，由硬件置位TI。CPU响应中断时，不能自动清除TI，TI必须由软件清除。</p>
+								<p style="font-size: 20px;font-weight: bold;">80C51中断的控制</p>
+								<p>一、中断允许控制</p>
+								<p style="text-indent: 2em;">CPU对中断系统所有中断以及某个中断源的开放和屏蔽是由中断允许寄存器IE控制的。</p>
+								<div id="wrapper">
+									<a	href="51学习/中断5.png" target="_blank">
+									<img  src ="51学习/中断5.png" alt="">
+									</a>
+								</div>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*EX0</span>(IE.0)，外部中断0允许位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*ET0</span>(IE.1)，定时/计数器T0中断允许位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*EX1</span>(IE.2)，外部中断0允许位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*ET1</span>(IE.3)，定时/计数器T1中断允许位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*ES</span>(IE.4)，串行口中断允许位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*EA</span>(IE.7)， CPU中断允许（总允许）位。</p>
+								<p>二、中断优先级控制</p>
+								<p style="text-indent: 2em;">80C51单片机有两个中断优先级，即可实现二级中断服务嵌套。每个中断源的中断优先级都是由中断优先级寄存器IP中的相应位的状态来规定的 。</p>
+								<div id="wrapper">
+									<a	href="51学习/中断6.png" target="_blank">
+									<img  src ="51学习/中断6.png" alt="">
+									</a>
+								</div>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PX0</span>（IP.0），外部中断0优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PT0</span>（IP.1），定时/计数器T0优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PX1</span>（IP.2），外部中断0优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PT1</span>（IP.3），定时/计数器T1优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PS </span>（IP.4）&nbsp;，串行口优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PT2</span>（IP.5） ，定时/计数器T2优先级设定位。</p>
+								<p style="text-indent: 2em;">而80C52单片机有四个中断优先级，即可实现四级中断服务嵌套。每个中断源的中断优先级由中断优先级寄存器IP和IPH中的相应位的状态来规定的 。</p>
+								<div id="wrapper">
+									<a	href="51学习/中断7.png" target="_blank">
+									<img  src ="51学习/中断7.png" alt="">
+									</a>
+								</div>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PX0</span>（IPH.0），外部中断0优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PT0</span>（IPH.1），定时/计数器T0优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PX1</span>（IPH.2），外部中断0优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PT1</span>（IPH.3），定时/计数器T1优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PS </span>（IPH.4）&nbsp;，串行口优先级设定位；</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">*PT2</span>（IPH.5） ，定时/计数器T2优先级设定位。</p>
+								<p style="text-indent: 2em;">同一优先级中的中断申请不止一个时，则有中断优先权排队问题。同一优先级的中断优先权排队，由中断系统硬件确定的自然优先级形成，其排列如所示：</p>
+								<div id="wrapper">
+									<a	href="51学习/中断8.png" target="_blank">
+									<img  src ="51学习/中断8.png" alt="">
+									</a>
+								</div>
+								<p>*设置52单片机的4个中断源,使他们的优顺序为T1,INT1,INT0,T0.</p>
+								<pre><code>&#9;IPH = 0x08;&#9;PT1 = 1;<br>&#9;IP&nbsp; = 0x40;&#9;PX1 = 1;</code></pre>
+							</div>
+						</article>
+					</div>
+					<ul class="post-near">
+						<li>
+							上一篇：<a href="51学习之中断.html">51学习之中断（一）</a>
+						</li>
+						<li>
+							下一篇：没有了
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p>&copy; 2018 喜宝 | 想投稿的朋友请联系QQ1808818536</p>
+	</footer>
+</html>
