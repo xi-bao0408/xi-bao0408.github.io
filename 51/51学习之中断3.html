@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charsef = "utf-8">
+		<title>喜宝-一个想要做一个关于民大的网页的人
+		</title>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="一个初学网页的小白想做一个网页">
+		<link rel="icon" type="image/ico" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/home_page.css">
+		<link rel="stylesheet" type="text/css" href="../css/learn.css">
+		<link rel="stylesheet" type="text/css" href="../css/HTML初级-基础标签.css">
+		<link rel="stylesheet" type="text/css" href="../css/picture.css">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275009736'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275009736%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275034787'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275034787%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>	
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="site-name col-mb-12 col-9">
+						<a id="logo" href=" ../index.html" title="首页">民大喜宝</a>
+						<p class="description">作为一名刚学网页的小白想做一个网页，虽然很难，但是我想试试 ^.^</p>
+					</div>
+					<div class="col-mb-12">
+						<ul id="ul-menu" class="clearfix" >
+							<a class="background" href="../index.html"title="首页">
+								首页
+							</a>
+							<a class="background" href="../picture.html" title="民大风光">
+								民大风光
+							</a>
+							<a class="background" href="../learn.html" title="网页学习">
+								网页学习
+							</a>
+							<a class="background" href="../learn1.html" title="51单片机学习">
+								51单片机学习
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 上面为标题头 -->
+		<div id="body">
+			<div class="container">
+				<div class="row">
+					<div class="col-12"></div>
+					<div class="col-mb-12 col-8" id="main" roal="main">
+						<article class="post">
+							<h1 class="post-title text-center" itemprop="name headline">
+								<a id="size" href="51学习之中断3.html">
+									51学习之中断(四)
+								</a>
+							</h1>
+							<ul class="post-meta text-center">
+								<li itemprop="author">
+									作者：
+									<a itemprop="name" href="../index.html" rel="author">喜宝</a>
+								</li>
+								<li>
+									时间：
+									<time datetime="2018-10-22T16:40:35+08:00" itemprop="datePublished">
+										2018-10-22
+									</time>
+								</li>
+								<li>
+									分类：
+									<a href="#">51单片机、例程</a>
+								</li>
+							</ul>
+							<div class="post-content p-content" itemprop="articleBody">
+								<p style="font-weight: bold;">定时/计数器的控制</p>
+								<p style="text-indent: 2em;">80C51单片机定时/计数器的工作由两个特殊功能寄存器控制。TMOD用于设置其工作方式；TCON用于控制其启动和中断申请。</p>
+								<p>一、工作方式寄存器TMOD</p>
+								<p style="text-indent: 2em;">工作方式寄存器TMOD用于设置定时/计数器的工作方式，低四位用于T0，高四位用于T1。其格式如下：</p>
+								<div id="wrapper">
+									<a	href="51学习/中断11.png" target="_blank">
+									<img  src ="51学习/中断11.png" alt="">
+									</a>
+								</div>
+								<p style="text-indent: 2em;">GATE：门控位。GATE＝0时，只要用软件使TCON中的TR0或TR1为1，就可以启动定时/计数器工作；GATA＝1时，要用软件使TR0或TR1为1，同时外部中断引脚或也为高电平时，才能启动定时/计数器工作。即此时定时器的启动多了一条件。</p>
+								<p style="text-indent: 2em">C/<span style="text-decoration: overline;">T</span>：定时/计数模式选择位。C/<span style="text-decoration: overline;">T</span>=0;为定时模式，C/<span style="text-decoration: ">T</span>=1;为计数模式。</p>
+								<p style="text-indent: 2em;">M1M0：工作方式设置位。定时/计数器有四种工作方式，由M1M0进行设置。</p>
+								<div id="wrapper">
+									<a	href="51学习/中断12.png" target="_blank">
+									<img  src ="51学习/中断12.png" alt="">
+									</a>
+								</div>
+								<p>二、控制寄存器TCON</p>
+								<p style="text-indent: 2em;">TCON的低4位用于控制外部中断,已在前面介绍。TCON的高4位用于控制定时/计数器的启动和中断申请。其格式如下：</p>
+								<div id="wrapper">
+									<a	href="51学习/中断13.png" target="_blank">
+									<img  src ="51学习/中断13.png" alt="">
+									</a>
+								</div>
+								<p><span style="color: #cd1076;">*TF1</span>（TCON.7）：T1溢出中断请求标志位。T1计数溢出时由硬件自动置TF1为1。CPU响应中断后TF1由硬件自动清0。T1工作时，CPU可随时查询TF1的状态。所以，TF1可用作查询测试的标志。TF1也可以用软件置1或清0，同硬件置1或清0的效果一样。</p>
+								<p><span style="color: #cd1076;">*TR1</span>（TCON.6）：T1运行控制位。TR1置1时，T1开始工作；TR1置0时，T1停止工作。TR1由软件置1或清0。所以，用软件可控制定时/计数器的启动与停止。</p>
+								<p><span style="color: #cd1076;">*TF0</span>（TCON.5）：T0溢出中断请求标志位，其功能与TF1类同。</p>
+								<p><span style="color: #cd1076;">*TR0</span>（TCON.4）：T0运行控制位，其功能与TR1类同。</p>
+								<p style="font-weight: bold;">定时/计数器的工作方式</p>
+								<p>一、方式0</p>
+								<p style="text-indent: 2em;"><span style="color: #f30;">方式0为13位计数</span>，由TL0的低5位（高3位未用）和TH0的8位组成。TL0的低5位溢出时向TH0进位，TH0溢出时，置位TCON中的TF0标志，向CPU发出中断请求。</p>
+								<div id="wrapper">
+									<a	href="51学习/中断14.png" target="_blank">
+									<img  src ="51学习/中断14.png" alt="">
+									</a>
+								</div>
+								<p><span style="color: #cd1076;">定时器模式时</span>有:N＝t/ Tcy </p>
+								<p>计数初值计算的公式为： X=2<sup>13</sup>-N</p>
+								<p style="color: #cd1076;">定时器的初值还可以采用计数个数直接取补法获得。</p>
+								<p>计数模式时，计数脉冲是T0引脚上的外部脉冲。</p>
+								<br>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">门控位GATE</span>具有特殊的作用。当GATE=0时，经反相后使或门输出为1，此时仅由TR0控制与门的开启，与门输出1时，控制开关接通，计数开始；<span style="color: #f30;">当GATE=1时</span>，由外中断引脚信号控制或门的输出，此时控制<span style="color: #f30;">与门的开启由外中断引脚信号和TR0共同控制</span>。当TR0=1时，外中断引脚信号引脚的<span style="color: #f30;">高电平启动计数</span>，外中断引脚信号引脚的<span style="color: #f30;">低电平停止计数</span>。这种方式常用来测量外中断引脚上正脉冲的宽度。</p>
+								<p>二、方式1 </p>
+								<p style="text-indent: 2em;">方式1的计数位数是16位，由TL0作为低8位、TH0作为高8位，组成了16位加1计数器 。</p>
+								<div id="wrapper">
+									<a	href="51学习/中断14.png" target="_blank">
+									<img  src ="51学习/中断14.png" alt="">
+									</a>
+								</div>
+								<p>计数个数与计数初值的关系为： X=2<sup>16</sup>-N</p>
+								<p>三、方式2 </p>
+								<p style="text-indent: 2em;">方式2为自动重装初值的8位计数方式。 </p>
+								<div id="wrapper">
+									<a	href="51学习/中断14.png" target="_blank">
+									<img  src ="51学习/中断14.png" alt="">
+									</a>
+								</div>
+								<p>计数个数与计数初值的关系为： X=2<sup>8</sup>-N</p>
+								<p style="color: #cd1076;">工作方式2特别适合于用作较精确的脉冲信号发生器。  </p>
+								<p>四、方式3 </p>
+								<p style="text-indent: 2em;">方式3只适用于定时/计数器T0，<span style="color: #cd1076;">定时器T1处于方式3时相当于TR1=0，停止计数。 </span></p>
+								<div id="wrapper">
+									<a	href="51学习/中断14.png" target="_blank">
+									<img  src ="51学习/中断14.png" alt="">
+									</a>
+								</div>
+								<p style="color: #cd1076;">工作方式3将T0分成为两个独立的8位计数器TL0和TH0 。  </p>
+								<p style="font-weight: bold;">定时/计数器应用举例</p>
+								<p>初始化程序应完成如下工作：</p>
+								<p style="text-indent: 4em;">*对TMOD赋值，以确定T0和T1的工作方式。</p>
+								<p style="text-indent: 4em;">*计算初值,并将其写入TH0、TL0或TH1、TL1。</p>
+								<p style="text-indent: 4em;">*中断方式时，则对IE赋值，开放中断。</p>
+								<p style="text-indent: 4em;">*使TR0或TR1置位，启动定时/计数器定时或计数。</p>
+								<br><br>
+								<p style="color: #cd1076;">例  利用定时/计数器T1的方式1，产生10ms的定时，并使P1.0引脚上输出周期为20ms的方波，采用中断方式，设系统时钟频率为12 MHz。</p>
+								<p>解：1、计算计数初值X：<br>由于晶振为12 MHz，所以机器周期Tcy为1 μs。<br>所以：</p>
+								<p>N＝t/ Tcy ＝10000/1＝10000<br>X＝65536－10000＝55536＝D8F0H</p>
+								<p>即应将D8H送入TH0中，F0H送入TL0中</p>
+								<p>2、求T1的方式控制字TMOD：</p>
+								<p>M1M0=01，GATE=0，C/T=0，可取方式控制字为01H；</p>
+
+								<p>1、利用定时/计数器T0从P1.0输出周期为1s的方波，让发光二极管以1HZ闪烁，设晶振频率为12MHz。<br>2、利用定时/计数器T1产生定时时钟,由P1口控制8个发光二极管,使8个指示灯依次一个一个闪动，闪动频率为10次/秒(8个灯依次亮一遍为一个周期)，循环。<br>3、同时用两个定时器控制蜂鸣器发声，定时器0控制频率，定时器1控制同个频率持续的时间，间隔300ms依次输出1，10，50,100，200,400,800,<br>1k（hz）的方波。<br>4、用定时器以间隔500MS在6位数码管上依次显示0、1、2、3….C、D、E、F，重复。</p>
+								<p style="font-weight: bold;color: #f30; font-size: 20px;">51的中断样例代码</p>
+								<pre><code>#include&lt;reg52.h&gt;<br>#define uint unsigned int <br>#define uchar unsigned char<br>void init()<span style="color: #8fbc8f;">//初始化</span><br>{<br>&#9;TMOD=0x11;<span style="color: #8fbc8f;">//设置定时器0为工作方式1</span><br>&#9;TH0=(65536-10000)/256;<br>&#9;TL0=(65536-10000)%256;<br>&#9;TH1=(65536-20000)/256;<br>&#9;TL1=(65536-20000)%256;<br>&#9;EA=1;<span style="color: #8fbc8f;">//开总中断</span><br>&#9;ET0=1;<span style="color: #8fbc8f;">//开定时器0中断</span><br>&#9;ET1=1;<br>&#9;TR0=1;<span style="color: #8fbc8f;">//启动定时器0</span><br>&#9;TR1=1;<br>}<br>void main()<br>{<br><br><br>}<br>void time0() interrupt 1<br>{<br>&#9;TH0=(65536-10000)/256;<br>&#9;TL0=(65536-10000)%256;<br>&#9;tt++;<br>}<br>void time1() interrupt 3<br>{<br>&#9;TH1=(65536-20000)/256;<br>&#9;TL1=(65536-20000)%256;<br>&#9;num1++;<br>}</code></pre>
+							</div>
+						</article>
+					</div>
+					<ul class="post-near">
+						<li>
+							上一篇：<a href="51学习之中断2.html">51学习之中断（三）</a>
+						</li>
+						<li>
+							下一篇：没有了
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p>&copy; 2018 喜宝 | 想投稿的朋友请联系QQ1808818536</p>
+	</footer>
+</html>

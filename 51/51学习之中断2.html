@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charsef = "utf-8">
+		<title>喜宝-一个想要做一个关于民大的网页的人
+		</title>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="一个初学网页的小白想做一个网页">
+		<link rel="icon" type="image/ico" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/home_page.css">
+		<link rel="stylesheet" type="text/css" href="../css/learn.css">
+		<link rel="stylesheet" type="text/css" href="../css/HTML初级-基础标签.css">
+		<link rel="stylesheet" type="text/css" href="../css/picture.css">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275009736'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275009736%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275034787'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275034787%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>	
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="site-name col-mb-12 col-9">
+						<a id="logo" href=" ../index.html" title="首页">民大喜宝</a>
+						<p class="description">作为一名刚学网页的小白想做一个网页，虽然很难，但是我想试试 ^.^</p>
+					</div>
+					<div class="col-mb-12">
+						<ul id="ul-menu" class="clearfix" >
+							<a class="background" href="../index.html"title="首页">
+								首页
+							</a>
+							<a class="background" href="../picture.html" title="民大风光">
+								民大风光
+							</a>
+							<a class="background" href="../learn.html" title="网页学习">
+								网页学习
+							</a>
+							<a class="background" href="../learn1.html" title="51单片机学习">
+								51单片机学习
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 上面为标题头 -->
+		<div id="body">
+			<div class="container">
+				<div class="row">
+					<div class="col-12"></div>
+					<div class="col-mb-12 col-8" id="main" roal="main">
+						<article class="post">
+							<h1 class="post-title text-center" itemprop="name headline">
+								<a id="size" href="51学习之中断2.html">
+									51学习之中断(三)
+								</a>
+							</h1>
+							<ul class="post-meta text-center">
+								<li itemprop="author">
+									作者：
+									<a itemprop="name" href="../index.html" rel="author">喜宝</a>
+								</li>
+								<li>
+									时间：
+									<time datetime="2018-10-21T16:40:35+08:00" itemprop="datePublished">
+										2018-10-21
+									</time>
+								</li>
+								<li>
+									分类：
+									<a href="#">51单片机、例程</a>
+								</li>
+							</ul>
+							<div class="post-content p-content" itemprop="articleBody">
+								<p style="font-weight: bold;">51单片机的中断优先级有三条原则：</p>
+								<p style="text-indent: 4em;">*CPU同时接收到几个中断时，<span style="color: #cd1076;">首先响应优先级别最高的中断请求</span>。</p>
+								<p style="text-indent: 4em;">*正在进行的中断过程<span style="color: #cd1076;">不能被新的同级或低优先级的中断请求所中断</span>。</p>
+								<p style="text-indent: 4em;">*正在进行的低优先级中断服务，<span style="color: #cd1076;">能被高优先级中断请求所中断</span>。</p>
+								<p>为了实现上述后两条原则，<span style="color: #cd1076;">中断系统内部设有两个用户不能寻址的优先级状态触发器。</span>其中一个置1，表示正在响应高优先级的中断，它将阻断后来所有的中断请求；另一个置1，表示正在响应低优先级中断，它将阻断后来所有的低优先级中断请求。</p>
+								<p style="font-weight: bold;">中断响应条件和时间</p>
+								<p>中断响应条件</p>
+								<p style="text-indent: 4em;">*中断源有中断请求；</p>
+								<p style="text-indent: 4em;">*此中断源的中断允许位为1；</p>
+								<p style="text-indent: 4em;">*CPU开中断（即EA=1）。</p>
+								<p style="color: #cd1076;">以上三条同时满足时，CPU才有可能响应中断。</p>
+								<p style="font-weight: bold;">51的定时/计数器</p>
+								<p style="text-indent: 2em;">实时定时功能，<span style="color: #f30;">比较方便的办法是利用单片机内部的定时/计数器</span>。也可以采用下面三种方法：</p>
+								<p style="text-indent: 4em;"><span style="color: #cd1076;">*软件定时</span>：软件定时不占用硬件资源，但占用了CPU时间，降低了CPU的利用率。</p>
+								<p style="text-indent: 4em;"><span style="color: #cd1076;">*采用时基电路定时</span>：例如采用555电路，外接必要的元器件（电阻和电容），即可构成硬件定时电路。但在硬件连接好以后，定时值与定时范围不能由软件进行控制和修改，即不可编程。</p>
+								<p style="text-indent: 4em;"><span style="color: #cd1076;">*采用可编程芯片定时</span>：这种定时芯片的定时值及定时范围很容易用软件来确定和修改，此种芯片定时功能强，使用灵活。在单片机的定时/计数器不够用时，可以考虑进行扩展。</p>
+								<p style="font-weight: bold;">定时/计数器的结构和工作原理 </p>
+								<p>一、定时/计数器的结构 </p>
+								<p style="text-indent: 2em;">定时/计数器的实质是加1计数器（16位），由高8位和低8位两个寄存器组成。TMOD是定时/计数器的工作方式寄存器，确定工作方式和功能；TCON是控制寄存器，控制T0、T1的启动和停止及设置溢出标志。 </p>
+								<div id="wrapper">
+									<a	href="51学习/中断10.png" target="_blank">
+									<img  src ="51学习/中断10.png" alt="">
+									</a>
+								</div>
+								<p>二、定时/计数器的工作原理</p>
+								<p style="text-indent: 2em;"><span style="color: #cd1076;">加1计数器</span>输入的计数脉冲有两个来源,一个是由系统的时钟振荡器输出脉冲经12分频后送来；一个是T0或T1引脚输入的外部脉冲源。每来一个脉冲计数器加1，当加到计数器为全1时，再输入一个脉冲就使计数器回零，且计数器的溢出使TCON中TF0或TF1置1，向CPU发出中断请求（定时/计数器中断允许时）。如果定时/计数器工作于定时模式，则表示定时时间已到；如果工作于计数模式，则表示计数值已满。</p>
+								<p style="text-indent: 2em; color: #cd1076;">可见，由溢出时计数器的值减去计数初值才是加1计数器的计数值。</p>
+								<p><span style="color: #f30;">*设置为定时器模式时</span>，加1计数器是对内部机器周期计数（1个机器周期等于12个振荡周期，即计数频率为晶振频率的1/12）。<span style="color: #f30;">计数值</span>N<span style="color: #f30;">乘以机器周期</span>Tcy<span style="color: #f30;">就是定时时间</span>t。</p>
+								<p><span style="color: #f30;">*</span>设置为<span style="color: #f30;">计数器模式时</span>，外部事件计数脉冲由T0或T1引脚输入到计数器。在每个机器周期的S5P2期间采样T0、T1引脚电平。当某周期采样到一高电平输入，而下一周期又采样到一低电平时，则计数器加1，更新的计数值在下一个机器周期的S3P1期间装入计数器。由于检测一个从1到0的下降沿需要2个机器周期，因此要求被采样的电平至少要维持一个机器周期。当晶振频率为<span style="color: #f30;">12MHz时</span>，最高计数频率不超过1/2MHz，即计数脉冲的周期要大于<span style="color: #f30;">2μS</span></p>
+							</div>
+						</article>
+					</div>
+					<ul class="post-near">
+						<li>
+							上一篇：<a href="51学习之中断1.html">51学习之中断（二）</a>
+						</li>
+						<li>
+							下一篇：<a href="51学习之中断3.html">51学习之中断（四）</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p>&copy; 2018 喜宝 | 想投稿的朋友请联系QQ1808818536</p>
+	</footer>
+</html>
