@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charsef = "utf-8">
+		<title>喜宝-一个想要做一个关于民大的网页的人
+		</title>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="一个初学网页的小白想做一个网页">
+		<link rel="icon" type="image/ico" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/home_page.css">
+		<link rel="stylesheet" type="text/css" href="../css/learn.css">
+		<link rel="stylesheet" type="text/css" href="../css/HTML初级-基础标签.css">
+		<link rel="stylesheet" type="text/css" href="../css/picture.css">
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275009736'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275009736%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275034787'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275034787%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>	
+	</head>
+	<body>
+		<div id="header" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="site-name col-mb-12 col-9">
+						<a id="logo" href=" ../index.html" title="首页">民大喜宝</a>
+						<p class="description">作为一名刚学网页的小白想做一个网页，虽然很难，但是我想试试 ^.^</p>
+					</div>
+					<div class="col-mb-12">
+						<ul id="ul-menu" class="clearfix" >
+							<a class="background" href="../index.html"title="首页">
+								首页
+							</a>
+							<a class="background" href="../picture.html" title="民大风光">
+								民大风光
+							</a>
+							<a class="background" href="../learn.html" title="网页学习">
+								网页学习
+							</a>
+							<a class="background" href="../learn1.html" title="51单片机学习">
+								51单片机学习
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 上面为标题头 -->
+		<div id="body">
+			<div class="container">
+				<div class="row">
+					<div class="col-12"></div>
+					<div class="col-mb-12 col-8" id="main" roal="main">
+						<article class="post">
+							<h1 class="post-title text-center" itemprop="name headline">
+								<a id="size" href="51学习之键盘应用.html">
+									51学习之键盘应用(独立键盘)
+								</a>
+							</h1>
+							<ul class="post-meta text-center">
+								<li itemprop="author">
+									作者：
+									<a itemprop="name" href="../index.html" rel="author">喜宝</a>
+								</li>
+								<li>
+									时间：
+									<time datetime="2018-10-29T16:40:35+08:00" itemprop="datePublished">
+										2018-10-29
+									</time>
+								</li>
+								<li>
+									分类：
+									<a href="#">51单片机、例程</a>
+								</li>
+							</ul>
+							<div class="post-content p-content" itemprop="articleBody">
+								<p style="font-weight: bold;">1、键盘的分类</p>
+								<p style="text-indent: 2em;">键盘分编码键盘和非编码键盘。键盘上闭合键的识别由专用的硬件编码器实现，并产生键编码号或键值的称为编码键盘，如计算机键盘.</p>
+								<p style="text-indent: 2em;">而靠软件编程来识别的称为非编码键盘；</p>
+								<p style="text-indent: 2em;">在单片机组成的各种系统中，用的最多的是非编码键盘。也有用到编码键盘的。</p>
+								<br>
+								<p style="color: #f30;">按键的主要原理是，在一条电路中，有一处弹性按键，当按下后电路导通，松手后电路断开，通过检测电路的信号来判断按键是否按下。</p>
+								<p style="color: #f30;">按键在按下和松开的瞬间均伴随有一连串的抖动，键抖动会引起一次按键被误读多次，然后为了保证单片机对键的一次闭合仅作一次处理，所以我们必须去除抖动。去除抖动有2种，硬件消抖和软件消抖。其中一软件消抖最方便。</p>
+								<div id="wrapper">
+									<a	href="51学习/按键1.png" target="_blank">
+									<img  src ="51学习/按键1.png" alt="">
+									</a>
+								</div>
+								<p style="color: #f30;">软件消抖一般为延时消抖，在程序中加一段延时，再去检测按键是否被按下，如果 是处理一次，否重复检测。</p>
+								<p>非编码键盘有分为：独立键盘和行列式（又称为矩阵式）键盘。</p>
+								<p>独立键盘</p>
+								<div id="wrapper">
+									<a	href="51学习/独立键盘.png" target="_blank">
+									<img  src ="51学习/独立键盘.png" alt="">
+									</a>
+								</div>
+								<p>通过电路图可以看出有，独立键盘总共拥有4个独立按键，按键一端接地（GND）一端接P3^0~3IO口。<br>当S2按下时 P3^0==0;表示按键按下<br>当S3按下时 P3^1==0;表示按键按下<br>当S4按下时 P3^2==0;表示按键按下<br>当S5按下时 P3^3==0;表示按键按下</p>
+								<p>代码如下：</p>
+								<pre><code>#include&lt;reg52.h&gt;<br>sbit led1=P1^0;<br>sbit led2=P1^1;<br>sbit led3=P1^2;<br>sbit led4=P1^3;<br><br>sbit key1=P3^0;<br>sbit key2=P3^1;<br>sbit key3=P3^2;<br>sbit key4=P3^3;<br>void delayms(unsigned int k)<span style="color: #8fbc8f;">//延时函数</span><br>{<br>&#9;unsigned int i , j;<br>&#9;for(i = 0;i &lt; k;i++)<br>&#9;for(j = 0;j &lt; 125;j++)<br>}<br>void keypros()<span style="color: #8fbc8f">独立按键控制</span><br>&#9;if(key1==0)<br>&#9;{<br>&#9;&#9;delayms(1000);<span style="columns: #8fbc8f">//消抖</span><br>&#9;&#9;if(key1==0)<br>&#9;&#9;{<br>&#9;&#9;&#9;led1=~led1;<span style="color: #8fbc8f">//翻转</span><br>&#9;&#9;}<br>&#9;&#9;while(!key1);<br>&#9;}<br>&#9;if(key2==0)<br>&#9;{<br>&#9;&#9;delayms(1000);<span style="columns: #8fbc8f">//消抖</span><br>&#9;&#9;if(key2==0)<br>&#9;&#9;{<br>&#9;&#9;&#9;led2=~led2;<span style="color: #8fbc8f">//翻转</span><br>&#9;&#9;}<br>&#9;&#9;while(!key2);<br>&#9;}<br>&#9;if(key3==0)<br>&#9;{<br>&#9;&#9;delayms(1000);<span style="columns: #8fbc8f">//消抖</span><br>&#9;&#9;if(key3==0)<br>&#9;&#9;{<br>&#9;&#9;&#9;led3=~led3;<span style="color: #8fbc8f">//翻转</span><br>&#9;&#9;}<br>&#9;&#9;while(!key3);<br>&#9;}<br>&#9;if(key4==0)<br>&#9;{<br>&#9;&#9;delayms(1000);<span style="columns: #8fbc8f">//消抖</span><br>&#9;&#9;if(key4==0)<br>&#9;&#9;{<br>&#9;&#9;&#9;led4=~led4;<span style="color: #8fbc8f">//翻转</span><br>&#9;&#9;}<br>&#9;&#9;while(!key4);<br>&#9;}<br><br>void main()<br>{<br>&#9;while(1)<br>&#9;{<br>&#9;&#9;keypros();<br>&#9;}<br>}</code></pre>
+							</div>
+						</article>
+					</div>
+					<ul class="post-near">
+						<li>
+							上一篇：<a href="51学习之中断3.html">51学习之中断（四）</a>
+						</li>
+						<li>
+							下一篇：<a href="51学习之键盘应用1.html">51学习之键盘应用(矩阵键盘)</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p>&copy; 2018 喜宝 | 想投稿的朋友请联系QQ1808818536</p>
+	</footer>
+</html>
